@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div>
-      <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded border dark:bg-gray-900 ">
+      <nav className="bg-[#171A29] border-gray-200 px-2 sm:px-4 py-2.5 rounded border dark:bg-gray-900 ">
         <div className="container flex flex-wrap items-center justify-between mx-auto">
           <Link to="/" className="flex items-center">
             <img 
@@ -11,7 +11,7 @@ const Navbar = () => {
               className="h-16 mr-3 sm:h-9"
               alt="NINE-DINE Logo"
             />
-            <span className="self-center text-xl font-bold whitespace-nowrap dark:text-white">
+            <span className="self-center text-white text-xl font-bold whitespace-nowrap dark:text-white">
             NINE-DINE
             </span>
           </Link>
