@@ -9,7 +9,6 @@ function restaurantInfo() {
   const [restaurantMenu, setrestaurantMenu] = useState([]);
   const [searchtext, setsearchtext] = useState("");
   const [filteredrestaurantMenu, setfilteredrestaurantMenu] = useState([]);
-  console.log("object");
   useEffect(() => {
     fetch(
       "https://www.swiggy.com/dapi/menu/v4/full?lat=17.385044&lng=78.486671&menuId=" +
