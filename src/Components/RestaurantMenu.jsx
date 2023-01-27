@@ -61,14 +61,14 @@ function restaurantInfo() {
       <div className="flex flex-row flex-wrap justify-center items-center gap-4 mt-2">
         {filteredrestaurantMenu.map((item) => (
           
-           <div class="relative w-[300px] mt-4" key={item.id}>
-          <img class="w-full h-[300px] rounded-md"  src={`https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/${item.cloudinaryImageId}`}
+           <div className="relative w-[300px] mt-4" key={item.id}>
+          <img className="w-full h-[300px] rounded-md"  src={`https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/${item.cloudinaryImageId}`}
                 alt=""/>
-          <div class="w-[280px] absolute border shadow-lg left-[50%] bottom-[-5%]  bg-white/50  p-4 rounded-xl translate-x-[-50%] ">
-              <div class="flex flex-row  justify-between items-center gap-3">
+          <div className="w-[280px] absolute border shadow-lg left-[50%] bottom-[-5%]  bg-white/50  p-4 rounded-xl translate-x-[-50%] ">
+              <div className="flex flex-row  justify-between items-center gap-3">
               <div>
-                  <h4 class="text-black text-xl font-bold">{item.name}</h4>
-                  <small class="text-black font-semibold">₹{item.price / 100}</small>
+                  <h4 className="text-black text-xl font-bold">{item.name}</h4>
+                  <small className="text-black font-semibold">₹{item.price / 100}</small>
               </div>
          
               <button  className="text-white bg-[#171A29]  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 "><svg
