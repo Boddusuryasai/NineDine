@@ -19,8 +19,7 @@ function restaurantInfo() {
   }
   useEffect(() => {
     fetch(
-      "https://www.swiggy.com/dapi/menu/v4/full?lat=17.385044&lng=78.486671&menuId=" +
-        id
+      `https://www.swiggy.com/dapi/menu/v4/full?lat=17.385044&lng=78.486671&menuId=${id}`
     )
       .then((res) => res.json())
       .then((d) => {
@@ -70,8 +69,8 @@ function restaurantInfo() {
         {filteredrestaurantMenu.map((item) => (
           
            <div className="relative w-[250px] mt-4" key={item.id}>
-          <img className="w-full h-[250px] rounded-md"  src={`https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/${item.cloudinaryImageId}`}
-                alt={item.name}/>
+          {item.cloudinaryImageId ? <img className="w-full h-[250px] rounded-md"  src={`https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/${item.cloudinaryImageId}`}
+                alt={item.name}/>: <div className="w-full h-[250px] rounded-md border"></div>}
           <div className="w-[230px] absolute border shadow-lg left-[50%] bottom-[-5%]  bg-white/50  p-4 rounded-xl translate-x-[-50%] ">
               <div className="flex flex-row  justify-between items-center gap-3">
               <div>
