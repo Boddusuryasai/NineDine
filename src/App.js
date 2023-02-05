@@ -5,9 +5,13 @@ import About from "./Components/About";
 import Navbar from "./Components/Navbar";
 import RestaurantList from "./Components/RestaurantList";
 import RestaurantMenu from "./Components/RestaurantMenu";
-import Cart from "./Components/Cart"
+import Cart from "./Components/Cart";
+import { store } from "./store/store";
+import { Provider } from "react-redux";
+
 
 const Container =()=>{
+  
   return (
     <>
       <Navbar />
@@ -43,4 +47,6 @@ const router = createBrowserRouter([
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
-root.render(<RouterProvider router={router} />)
+root.render(<Provider store={store}>
+        <RouterProvider router={router}/>
+            </Provider>)

@@ -9,8 +9,7 @@ function RestaurantCard( { name,
   
   return (
     <div>
-      <div className="w-full max-w-xs mt-2 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-        
+      <div className="w-full max-w-[250px] mt-2 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">    
           <img
             className=" p-4 rounded-t-lg"
             src={
