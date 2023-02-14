@@ -6,15 +6,28 @@ const cartSlice = createSlice({
         cartItems :[]
     },
     reducers: {
-        addItem:(state,action)=>{
-            state.cartItems.push(action.payload)
-        } ,
+        addItem: (state, action) => {
+            const newItem = action.payload;
+            const existingItem = state.cartItems.find(item => item.id === newItem.id);
+            if (existingItem) {
+                existingItem.count += 1;
+            } else {
+                state.cartItems.push({
+                    ...newItem,
+                    count: 1 // or set to newItem.count if count is already present in newItem
+                });
+            }
+        },
         removeItem:(state,action)=>{
            let index = state.cartItems.findIndex((item)=>{
                 return item.id===action.payload
-
             })
-            state.cartItems.splice(index , 1)
+            if(state.cartItems[index].count>1){
+                state.cartItems[index].count -=1
+            }else{
+                state.cartItems.splice(index , 1)
+            }
+           
         } ,
         clearCart:(state,action)=>{
             state.cartItems=[]
